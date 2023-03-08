@@ -1,3 +1,4 @@
+//file js tinh tong hai so a,b nhap tu ban phim
 //nhap gia tri cho a la mot so nguyen tu ban phim
 var a = prompt("nhap vao so nguyen a: ");
 //ep kieu gia tri a tu string sang so nguyen
