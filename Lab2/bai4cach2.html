@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var hoVaTen = prompt("nhap vao ho va ten can tach: ");
+        //tach ho va ten vua nhap theo dau cach va xoa bo nhung khoang trang khong can thiet
+        var hoVaTenHopLe = hoVaTen.split(" ").filter(Boolean);
+        var gioiTinh = prompt("nhap vao gioi tinh: ");
+        var check = false;
+        if(hoVaTenHopLe.length==2)
+        {
+            check = true;
+            document.writeln("ho: "+hoVaTenHopLe[0]+"<br>");
+            document.writeln("ten: "+hoVaTenHopLe[1]);
+        }
+        else 
+        {
+            var ho = hoVaTenHopLe[0];
+            var ten = hoVaTenHopLe[hoVaTenHopLe.length-1];
+            document.writeln("ho: "+ho+"<br>");
+            document.writeln("ten: "+ten+"<br>");
+            if(hoVaTenHopLe.length==3)
+            {
+                var tenDem = hoVaTenHopLe[1];
+                document.writeln("ten dem: "+tenDem+"<br>"); 
+            }
+            else
+            {
+                tenDem = hoVaTenHopLe[1]+" ";
+                for(var i=2;i<hoVaTenHopLe.length-1;i++)
+                {
+                    tenDem += hoVaTenHopLe[i];
+                }
+                document.writeln("ten dem: "+tenDem+"<br>");
+            }
+            if(gioiTinh.toLowerCase()=="nam")
+            {
+                tenDem = "Van"
+            }
+            else
+            {
+                tenDem = "Ve";
+            }
+        }
+        if(check==false)
+        {
+            document.writeln("ho va ten sau thay doi: "+ho+" "+tenDem+" "+ten);
+        }
+     
+    </script>
+</body>
+</html>
