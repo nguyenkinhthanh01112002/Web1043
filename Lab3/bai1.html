@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkDiem(diem)
+        {
+            let check = true;
+            if(diem<0||diem>10)
+            {
+                check = false;
+            }
+            return check;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        while(true)
+        {
+           
+            //nhap vao diem cua mon toan
+            var check;
+            //khai bao bien toan cuc de luu tru gia gia cua diem
+            var a1,b1,c1,d1;
+            var a = null;
+            var b=c=d=a;
+            do{
+                check = true;
+                let a = prompt("nhap vao diem cua mon toan: ");
+                a1 = parseFloat(a);
+                if(checkDiem(a1)==false||a===null||a==="")
+                {
+                    alert("diem ban vua nhap khong hop le!!!");
+                    alert("vui long nhap lai cho dung(diem>=0||diem<=10)");
+                    check = false;
+                }
+            }
+            while(check==false);
+            
+            //nhap vao diem cua mon li
+            do
+            {
+                check = true;
+                let b = prompt("nhap vao diem cua mon ly: ");
+                b1 = parseFloat(b);
+                if(checkDiem(b1)==false||b===null||b==="")
+                {
+                    alert("diem ban vua nhap khong hop le!!!");
+                    alert("vui long nhap lai cho dung(diem>=0||diem<=10)");
+                    check = false;
+                }
+            }
+            while(check==false);
+            //nhap vao diem cua mon hoa
+            do
+            {
+                check = true;
+                let c = prompt("nhap vao diem cua mon hoa: ");
+                c1 = parseFloat(c);
+                if(checkDiem(c1)==false||c===null||c==="")
+                {
+                    alert("diem ban vua nhap khong hop le!!!");
+                    alert("vui long nhap lai cho dung(diem>=0||diem<=10)");
+                    check = false;
+                }
+            }
+            while(check==false);
+           
+            //nhap vao diem cua mon sinh
+            do
+            {
+                check = true;
+                let d = prompt("nhap vao diem cua mon sinh: ");
+                d1 = parseFloat(d);
+                if(checkDiem(d1)==false||d===null||d==="")
+                {
+                    alert("diem ban vua nhap khong hop le!!!");
+                    alert("vui long nhap lai cho dung(diem>=0||diem<=10)");
+                    check = false;
+                }
+            }
+            while(check==false);
+            console.log(`${a1}`);
+            let diemTB = (a1+b1+c1+d1)/4;
+            console.log("1.Xep loai switch case");
+            console.log("2.Xep loai if else");
+            console.log("0.Thoat chuong trinh");
+            let button = prompt("nhap vao lua chon cua ban: ");
+            switch(button)
+            {
+                case "1":
+                    {
+                        switch(true)
+                        {
+                            case (diemTB >=9&&diemTB<=10):
+                            console.log("Hoc luc gioi");
+                            break;
+                            case (diemTB >=7&&diemTB<9):
+                            console.log("Hoc luc kha");
+                            break;
+                            case (diemTB >=5&&diemTB<7):
+                            console.log("Hoc luc trung binh");
+                            break;
+                            case (diemTB >= 0&&diemTB<5):
+                            console.log("Hoc luc yeu");
+                            break;
+                        }
+                        process.exit();
+                        break;
+                    }
+                case "2":
+                    {
+                        if(diemTB<5)
+                        {
+                            console.log("yeu");
+                        }
+                        else if(diemTB<7)
+                        {
+                            console.log("trung binh");
+                        }
+                        else if(diemTB<9)
+                        {
+                            console.log("kha");
+                        }
+                        else
+                        {
+                            console.log("gioi");
+                        }
+                        process.exit();
+                        break;
+                    }
+                case "0":
+                    {
+                        console.log("cam on ban da su dung dich vu");
+                        process.exit();
+                    }
+                default:
+                    {
+                        alert("chuc nang ban tim kiem khong ton tai!!!");
+                        alert("vui long nhap lai chuc nang ban muon chon");
+                        continue;
+                    }
+
+            }
+        }
+    </script>
+</body>
+</html>
