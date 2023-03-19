@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        //ham kiem tra diem nhap vao
         function checkDiem(diem)
         {
             let check = true;
@@ -15,8 +16,52 @@
             }
             return check;
         }
+        //xet hoc dung bang if else
+        function ifElse(diemTB)
+        {
+            let hocLuc;
+            if(diemTB<5)
+            {
+                hocLuc = "yeu";
+            }
+            else if(diemTB<7)
+            {
+                hocLuc = "trung binh";
+            }
+            else if(hocLuc<9)
+            {
+                hocLuc = "kha";
+            }
+            else
+            {
+                hocLuc = "gioi";
+            }
+            return hocLuc;
+        }
+        function switchCase(diemTB)
+        {
+            let hocLuc;
+            switch(true)
+            {
+                case (diemTB >=9&&diemTB<=10):
+                    hocLuc = "gioi";
+                    break;
+                case (diemTB >=7&&diemTB<9):
+                    hocLuc = "kha";    
+                    break;
+                case (diemTB >=5&&diemTB<7):
+                    hocLuc = "trung binh";
+                    break;
+                case (diemTB >= 0&&diemTB<5):
+                    hocLuc = "yeu";
+                    break;
+            }       
+            return hocLuc;       
+
+        }
     </script>
 </head>
+
 <body>
     <script>
         while(true)
@@ -84,52 +129,26 @@
                 }
             }
             while(check==false);
-            console.log(`${a1}`);
+           //tinh diem trung binh 
             let diemTB = (a1+b1+c1+d1)/4;
-            console.log("1.Xep loai switch case");
-            console.log("2.Xep loai if else");
-            console.log("0.Thoat chuong trinh");
+            //xuat diem trung binh
+            console.log("diem trung binh cua hoc sinh vua nhap: "+diemTB);
+            //hien thi menu cho nguoi dung chon chuc nang
+            alert("1.Xep loai switch case");
+            alert("2.Xep loai if else");
+            alert("0.Thoat chuong trinh");
             let button = prompt("nhap vao lua chon cua ban: ");
             switch(button)
             {
                 case "1":
                     {
-                        switch(true)
-                        {
-                            case (diemTB >=9&&diemTB<=10):
-                            console.log("Hoc luc gioi");
-                            break;
-                            case (diemTB >=7&&diemTB<9):
-                            console.log("Hoc luc kha");
-                            break;
-                            case (diemTB >=5&&diemTB<7):
-                            console.log("Hoc luc trung binh");
-                            break;
-                            case (diemTB >= 0&&diemTB<5):
-                            console.log("Hoc luc yeu");
-                            break;
-                        }
+                        console.log("hoc luc: "+(switchCase(diemTB)));
                         process.exit();
                         break;
                     }
                 case "2":
                     {
-                        if(diemTB<5)
-                        {
-                            console.log("yeu");
-                        }
-                        else if(diemTB<7)
-                        {
-                            console.log("trung binh");
-                        }
-                        else if(diemTB<9)
-                        {
-                            console.log("kha");
-                        }
-                        else
-                        {
-                            console.log("gioi");
-                        }
+                        console.log("hoc luc: "+(ifElse(diemTB)));
                         process.exit();
                         break;
                     }
@@ -142,7 +161,7 @@
                     {
                         alert("chuc nang ban tim kiem khong ton tai!!!");
                         alert("vui long nhap lai chuc nang ban muon chon");
-                        continue;
+                        break;
                     }
 
             }
