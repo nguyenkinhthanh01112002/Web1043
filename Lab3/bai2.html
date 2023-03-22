@@ -5,25 +5,30 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<!-- tạo một thẻ div có class="calculator" để chứa 2 phần input để hiển thị kết quả và khối chứa các nút -->
 	<div class="calculator">
-		<div class="display"></div>
+		<!-- khối chứa màn hình hiển thị kết quả -->
+        <input class="display" id="result"></input>
+		<!-- khối hiển thị các nút bấm hiển thị các nút bấm -->
 		<div class="buttons">
-			<button class="number" value="7">7</button>
-			<button class="number" value="8">8</button>
-			<button class="number" value="9">9</button>
-			<button class="operator" value="+">+</button>
-			<button class="number" value="4">4</button>
-			<button class="number" value="5">5</button>
-			<button class="number" value="6">6</button>
-			<button class="operator" value="-">-</button>
-			<button class="number" value="1">1</button>
-			<button class="number" value="2">2</button>
-			<button class="number" value="3">3</button>
-			<button class="operator" value="*">*</button>
-			<button class="number" value="0">0</button>
-			<button class="operator" value="/">/</button>
-			<button class="clear">Clear</button>
-			<button class="equal">=</button>
+			<!-- các hàm lần lượt sẽ được gọi khi nhấn vào các nút  -->
+			<button onclick="clearResult()">C</button>
+			<button onclick="getResult('/')">/</button>
+			<button onclick="getResult('*')">*</button>
+			<button onclick="getResult('-')">-</button>
+			<button onclick="getResult('+')">+</button>
+			<button onclick="getResult('7')">7</button>
+			<button onclick="getResult('8')">8</button>
+			<button onclick="getResult('9')">9</button>
+			<button onclick="getResult('4')">4</button>
+			<button onclick="getResult('5')">5</button>
+			<button onclick="getResult('6')">6</button>
+			<button onclick="getResult('1')">1</button>
+			<button onclick="getResult('2')">2</button>
+			<button onclick="getResult('3')">3</button>
+			<button onclick="getResult('0')">0</button>
+			<button onclick="getResult('.')">.</button>
+			<button onclick="calculate()">=</button>
 		</div>
 	</div>
 	<script src="script.js"></script>
