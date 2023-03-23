@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class SinhVien{
+            //creat constructor
+            constructor(id,first_name,last_name,class_id,email,phone_number,dob)
+            {
+                this.id = id;
+                this.first_name = first_name;
+                this.last_name = last_name;
+                this.class_id = class_id;
+                this.email = email;
+                this.phone_number = phone_number
+                this.dob = new Date(dob);
+            }
+            //phương thức getFullName
+           getFullName(){
+            return this.first_name+" "+this.last_name;
+           }
+            //phương thức tính tuổi theo ngày
+            getAgeDay()
+            {
+                const now = new Date();
+                //tính tuổi ra đơn vị mặc định mili giây
+                const miliminusTime = now.getTime() - this.dob.getTime();
+                //tính tuổi theo số ngày
+                const ageDay = Math.floor(miliminusTime / (1000 * 60 * 60 * 24));
+                return ageDay;
+            }
+            //phương thức tính tuổi theo năm
+            getAgeYear()
+            {
+                const now = new Date();
+                //tính tuổi ra đơn vị mặc định mili giây
+                const miliminusTime = now.getTime() - this.dob.getTime();
+                //tính tuổi theo số ngày
+                const ageDay = Math.floor(miliminusTime / (1000 * 60 * 60 * 24));
+                //tính tuổi theo số năm
+                const ageYear = Math.floor(ageDay / 365);
+                return ageYear;
+            }
+        }
+        //khai báo mảng có 5 phần từ
+        var listStudents = new Array(5);
+        for(let i=0;i<listStudents.length;i++)
+        {
+            alert(`nhap vao thong tin cua hoc sinh thu ${i+1} : `);
+            let id = prompt("Enter id: ");
+            let first_name = prompt("Enter first name: ");
+            let last_name = prompt("Enter last name: ");
+            let class_id = prompt("Enter class_id: ");
+            let email = prompt("Enter email: ");
+            let phone_number = prompt("Enter phone number: ");
+            //ngày tháng năm do người dùng nhập vào dd-mm-yy
+            let dobUser = prompt("Enter date of birth: ");
+            //tách chuỗi ngày tháng người dùng nhập để chỉnh lại định dạng phù hợp với Lớp Date của Js
+            const result = dobUser.split(/[\/-]/);
+            //dob có dạng yy--mm-dd
+            let dob = result[2]+"/"+result[1]+"/"+result[0];
+            //tạo mới đối tượng sinh viên với các tham số đối vào phù hợp với constructor
+            listStudents[i] = new SinhVien(id,first_name,last_name,class_id,email,phone_number,dob);
+        }
+        //sap xep sinh vien theo so tuoi tang dan
+        for(let i=0;i<listStudents.length-1;i++)
+        {
+            let minPos = i;
+            for(let j=i+1;j<listStudents.length;j++)
+            {
+                if(listStudents[j].getAgeDay()<listStudents[minPos].getAgeDay())
+                {
+                    minPos = j;
+                }
+            }
+            var temp = listStudents[i];
+            listStudents[i] = listStudents[minPos];
+            listStudents[minPos] = temp;
+        }
+        //duyệt các phần tử trong mảng và xuất thông tin sinh viên theo độ tuổi tăng dần
+        listStudents.forEach(student => {
+        console.log(`${student.getFullName()},(${student.getAgeDay()} ngày), (${student.getAgeYear()} tuổi) ` );
+        });
+        //hiển thị chiểu cao và chiều rộng của màn hình sử dụng
+        console.log("Chiều rộng màn hình là: " + window.screen.width);
+        console.log("Chiều cao màn hình là: " + window.screen.height);
+    </script>
+</body>
+</html>
