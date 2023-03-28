@@ -10,6 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="homepage.css">
+    <style>
+      .fade>img{
+        border-radius: 50px;
+      }
+    </style>
     <script src="homepage.js" defer></script>
 </head>
 <body>
@@ -30,19 +35,16 @@
     <!-- test mau -->
     <div class="slideshow-container">
       <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
         <img src="/AssignmentWeb/Assets/Images/img_mountains_wide.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
+        <div class="text">Caption One</div>
       </div>
       
       <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
         <img src="/AssignmentWeb/Assets/Images/img_nature_wide.jpg" style="width:100%">
         <div class="text">Caption Two</div>
       </div>
       
       <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
         <img src="/AssignmentWeb/Assets/Images/img_mountains_wide.jpg" style="width:100%">
         <div class="text">Caption Three</div>
       </div>
@@ -55,33 +57,240 @@
   </div>
     <!-- test mẫu -->
     <div class="container-heading">
-      <div class="wrap-heading-1"></div>
-      <div class="wrap-content-text"></div>
-      <div class="wrap-buttons"></div>
+      <div class="wrap-heading-1">
+        <h1>Cách dễ nhất để học <strong class="highlight">HTML/CSS</strong><br>cho người mới bắt đầu!</h1>
+        <p>Thực hành <span class="highlight">8 dự án</span> trên Figma, <span class="highlight">300+ bài tập</span> và thử thách, mua một lần học mãi mãi,<br> được thiết kế và hướng dẫn bởi Sơn Đặng.</p>
+      </div>
+      <div class="wrap-buttons">
+        <a class="button-1" href="https://htmlcss.fullstack.edu.vn/?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w">Đăng kí học thử</a>
+        <a class="button-2" href="https://htmlcss.fullstack.edu.vn/?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w">Mua khoá học</a>
+      </div>
     </div>
     <div class="container-features">
       <div class="container-content">
-        <div class="wrap-content-video"></div>
-        <div class="wrap-content-text"></div>
+        <div class="content-heading-2">
+          <h2>Thực hành 8 dự án với thiết kế trên Figma</h2>
+          <p>Figma là công cụ thiết kế UI/UX hàng đầu thế giới hiện nay.<br>Với 8 dự án thực hành trên Figma, bạn có thể tự làm lại hầu<br>hết mọi giao diện trang web mà bạn thấy.</p>
+          <a href="https://htmlcss.fullstack.edu.vn/?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w">Học thử ngay</a>
+        </div>
+        <div class="container-image-heading-2">
+          <img src="/AssignmentWeb/Assets/Images/image-content-heading-2.png" alt="image-heading-2">
+        </div>
       </div>
-      <div class="wrap-NoiDungKhoaHoc-feature" id="wrap-NoiDungKhoaHoc-feature">
-        <div class="image-NoiDungKhoaHoc"></div>
-        <div class="text-NoiDungKhoaHoc"></div>
+      <div class="container-content">
+        <div class="content-heading-2">
+          <h2>Khóa học được thiết kế bởi Sơn Đặng</h2>
+          <p>Sơn Đặng là CEO - Founder của Cộng Đồng Học Lập Trình F8.Hiện tại, anh vẫn<br>là một Fullstack developer với hơn 8 năm kinh nghiệm làm việc thực tế.</p>
+          <a href="https://htmlcss.fullstack.edu.vn/?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w">Tìm hiểu thêm</a>
+        </div>
+        <div class="container-image-heading-2">
+          <img class="image-mentor" src="/AssignmentWeb/Assets/Images/imge-mentor.jpg" alt="image-menter">
+        </div>
       </div>
-      <div class="wrap-DiemKhaBiet-feature" id="wrap-DiemKhaBiet-feature">
-        <div class="text-DiemKhacBiet"></div>
-        <div class="image-DiemKhacBiet"></div>
+      <div class="container-Khoa-Hoc" id="wrap-NoiDungKhoaHoc-feature">
+        <div class="content-Khoa-Hoc-heading">
+          <h2>Kiến thức đầy đủ và chi tiết nhất</h2>
+          <p>Với <strong class="highlight">400+ bài học</strong>, bài tập và thử thách, đây sẽ là khóa học đầy đủ và<br> chi tiết nhất bạn có thể tìm kiếm được ở trên Internet.</p>
+        </div>
+        <div class="container-Khoa-Hoc-Lists">
+            <ul class="list-1">
+              <li>Cấu trục file HTML/CSS</li>
+              <li>Tìm hiểu các thẻ Meta</li>
+              <li>Thuộc tính trong HTMl</li>
+              <li>Sử dụng liên kết</li>
+              <li>Sử dụng Emmet</li>
+            </ul>
+            <ul class="list-2">
+              <li>Tính thừa kế trong CSS</li>
+              <li>Thẻ Inline/Block</li>
+              <li>Đệm viền khoảng lề</li>
+              <li>Đơn vị trong CSS</li>
+              <li>Làm việc với font chữ</li>
+            </ul>
+            <ul class="list-3">
+              <li>Tính thừa kế trong CSS</li>
+              <li>Thẻ Inline/Block</li>
+              <li>Đệm viền khoảng lề</li>
+              <li>Đơn vị trong CSS</li>
+              <li>Làm việc với font chữ</li>
+            </ul>
+            <ul class="list-4">
+              <li>Tính thừa kế trong CSS</li>
+              <li>Thẻ Inline/Block</li>
+              <li>Đệm viền khoảng lề</li>
+              <li>Đơn vị trong CSS</li>
+              <li>Làm việc với font chữ</li>
+            </ul>
+        </div>
+        <p>Ở đây chỉ bao gồm nội dung tiêu biểu. Nếu muốn, bạn có thể xem <strong class="highlight"><a href="https://accounts.fullstack.edu.vn/login?continue=https%3A%2F%2Fhtmlcss.fullstack.edu.vn%2F%3Ffbclid%3DIwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w">đầy đủ nội dung khóa học tại đây</a></strong>.</p>
       </div>
-      <div class="wrap-ThongSoKiThuat-feature" id="wrap-ThongSoKiThuat-feature">
-        <div class="image-ThongSoKiThuat"></div>
-        <div class="text-ThongSoKiThuat"></div>
-      </div>  
-    </div>
-    <div class="footer-page" id="lien_he">
-      <div class="icons-footer"></div>
-      <div class="footer-content-1"></div>
-      <div class="footer-content-2"></div>
-      <div class="footer-content-3"></div>
+      <div class="container-NoiDungKhoaHoc" id="wrap-DiemKhaBiet-feature">
+        <div class="wrap-image-NoiDungKhoaHoc">
+          <img src="/AssignmentWeb/Assets/Images/image-NoiDungKhoaHoc.png">
+        </div>
+        <div class="container-text-NoiDungKhoaHoc">
+          <h2>Không quên kiến thức với ứng dụng Flashcards</h2>
+          <p>Việc ghi nhớ giờ đây không còn là vấn đề nữa. Flashcards là phương pháp ghi nhớ thông qua việc<br>lặp lại, kiến thức trong khóa học sẽ được bạn ghi nhớ trong dài hạn.</p>
+          <p>Chỉ với chiếc điện thoại thông minh, giờ đây bạn có thể ôn lại kiến thức ở mọi lúc, mọi nơi.</p>
+          <a href="https://fullstack.edu.vn/landing/htmlcss/?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w#course-content" target="_blank" rel="noopener">Truy cập Flashcards</a>
+        </div>
+      </div>
+      <div class="container-DiemKhacBiet">
+        <div class="wrap-DanhSachBaiHoc">
+          <ul class="wrap-items">
+            <li>Chuyên sâu và bài bản hơn</li>
+            <li>Thực hành 8 dự án thực tế</li>
+            <li>400+ bài học, 300+ bài tập</li>
+            <li>200+ flashcards, 3+ games</li>
+            <li>Đáp án cho mọi bài tập</li>
+            <li>Kênh hỏi đáp riêng tư</li>
+            <li>Tặng 20+ Figma bản Pro</li>
+          </ul>
+        </div>
+        <div class="wrap-content-DiemKhacBiet">
+          <h2>Điểm khác biệt giữa khóa học Pro và Free?</h2>
+          <p>Nội dung đa dạng, đầy đủ và chuyên sâu hơn. Học trên nền tảng Pro với nhiều tính năng<br> chuyên nghiệp như: gợi ý cách làm, xem đáp án, so sánh code, chữa bài tập, ghi chú<br>cá nhân, và nhiều tính năng Pro khác.</p>
+          <p>Bạn chưa cần mua ngay lúc này. Nhấn vào nút dưới đây để trải nghiệm miễn phí.</p>
+          <a href="https://fullstack.edu.vn/landing/htmlcss/?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w#course-content" target="_blank" rel="noopener">Trải nghiệm miễn phí</a>
+        </div>
+      </div>
+      <div class="container-review">
+          <div class="wrap-heading-review">
+            <h2>Tại sao bạn nên sở hữu khóa học này?</h2>
+            <p>Cách khoá học này giúp bạn thành thạo HTML/CSS</p>
+          </div>
+          <div class="container-content-review">
+            <div class="container-review-1">
+                <div class="content-review-1">
+                  <img src="/AssignmentWeb/Assets/Images/image-review-1.png"/>
+                  <h3>Theo lộ trình bài bản</h3>
+                  <p>Kiến thức được sắp xếp từ cơ bản tới nâng cao, phù hợp<br>cho dù bạn là người mới bắt đầu. Sơn Đặng có trên 8 năm<br>kinh nghiệm thực tế, những kiến thức anh chia sẻ đều sẽ<br> giúp ích khi bạn đi làm tại doanh nghiệp.</p>
+                </div>
+                <div class="content-review-2">
+                  <img src="/AssignmentWeb/Assets/Images/image-review-2.png">
+                  <h3>Học trên nền tảng hàng đầu</h3>
+                  <p>Khóa học Pro được thiết kế riêng biệt, không học chung với nền<br>tảng Free. Các tính năng, các tiện ích luôn được phát triển để<br> đáp ứng tối đa nhu cầu tự học lập trình. Hướng tới mục tiêu cá<br> nhân hóa trải nghiệm học tập cho từng học viên.</p>
+                </div>
+            </div>
+            <div class="container-review-2">
+                <div class="content-review-3">
+                  <img src="/AssignmentWeb/Assets/Images/image-review-3.png"/>
+                  <h3>Thực hành 8 dự án</h3>
+                  <p>Phần lớn người học chỉ cần xem hướng dẫn tới dự án I. Từ dự án II<br> trở đi họ đã bắt đầu tự làm mà không phụ thuộc vào hướng dẫn.<br> Trải qua 8 dự án, chắc chắn bạn sẽ tự làm được hầu hết các giao diện<br> trang web mà bạn thấy.</p>
+                </div>
+                <div class="container-review-4">
+                  <img src="/AssignmentWeb/Assets/Images/image-review-4.png"/>
+                  <h3>Người "thầy" tâm huyết</h3>
+                  <p>Một trong những yếu tố quan trọng để chọn lựa khóa học online đó là<br>chọn "thầy". Từ kiến thức, giọng nói, cách truyền đạt, ... của họ đều<br> phải phù hợp thì người học mới có thêm động lực. Bạn có thể trải<br> nghiệm miễn phí các bài học từ Sơn Đặng.</p>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="container-experienced-users">
+        <h2>Trải nghiệm miễn phí ngay hôm nay</h2>
+        <p>Bắt đầu hoàn toàn miễn phí mà vẫn đầy đủ các tính năng của tài khoản Pro.<br>Bạn chỉ thực sự trả tiền khi mọi thứ là xứng đáng.</p>
+        <div class="wrap-buttons-users">
+          <a href="https://htmlcss.fullstack.edu.vn/?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank"  rel="noopener">Học thử miễn phí</a>
+          <a href="https://htmlcss.fullstack.edu.vn/?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Mua khoá học</a>
+        </div>
+      </div>
+      <div class="container-ThongSoKiThuat" id="wrap-ThongSoKiThuat-feature">
+        <div class="wrap-ThongSoKiThuat">
+          <div class="wrap-ThongSoKiThuat-Heading">
+            <h2>Thông số kỹ thuật</h2>
+            <p>Đáp ứng các chỉ tiêu về mặt kỹ thuật, giúp người học có trải nghiệm tốt nhất.</p>
+          </div>
+          <div class="wrap-table">
+            <table class="ThongSoKiThuat-Table">
+              <tbody>
+                <tr>
+                  <td>Âm thanh/ giọng nói</td>
+                  <td>Giọng Bắc, rõ ràng, tốc độ vừa phải</td>
+                </tr>
+                <tr>
+                  <td>Chất lượng bài học video</td>
+                  <td>60 FPS/480p, 720p, 1080p, 1440p</td>
+                </tr>
+                <tr>
+                  <td>Trải nghiệm trên di động</td>
+                  <td>Tương thích hoàn toàn</td>
+                </tr>
+                <tr>
+                  <td>Mạng phân phối nội dung</td>
+                  <td>Tốc độ cao trong nước và quốc tế</td>
+                </tr>
+                <tr>
+                  <td>Hỗ trợ giao diện sáng tối</td>
+                  <td>Có</td>
+                </tr>
+                <tr>
+                  <td>Hỗ trợ sử dụng phím tắt</td>
+                  <td>Có</td>
+                </tr>
+                <tr>
+                  <td>Các loại nội dung học</td>
+                  <td>Bài học video, kiểm tra, thử thách, flashcards, games, v.v</td>
+                </tr>
+                <tr>
+                  <td>Nhiều tính năng khác</td>
+                  <td>Trải nghiệm miễn phí</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="container-start-button">
+        <h2>Bắt đầu trở thành nhà phát triển<br>chuyên nghiệp?</h2>
+        <p>Bắt tay vào làm không khó, khó ở chỗ bao giờ thì chúng ta bắt đầu?</p>
+        <a href="https://htmlcss.fullstack.edu.vn/?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w">Bắt đầu ngay</a>
+      </div>
+      <!-- Liên Hệ -->
+      <div class="container-LienHe">
+        <div class="container-content-lienhe">
+          <div class="wrap-logo-lienhe">
+            <img src="/AssignmentWeb/Assets/Icons/Logo.png" alt="logo"/>
+            <span>HỌC LẬP TRÌNH<br> ĐỂ ĐI LÀM</span>
+          </div>
+          <ul class="wrap-content-lienhe">
+            <li><a href="tel:+842463291102">Điện thoại: 0246.329.1102</a></li>
+            <li><a href="mailto:contact@fullstack.edu.vn">Email:contact@fullstack.edu.vn</a></li>
+            <li>Địa chỉ: Số 26 Dương Đình Nghệ, Phường Yên</li>
+            <li>Hòa, Quận Cầu Giấy, TP. Hà Nội
+            </li>
+          </ul>
+      </div>
+      <ul class="AboutF8">
+        <span>Về F8</span>
+        <li><a href="https://fullstack.edu.vn/about-us?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Giới Thiệu</a></li>
+        <li><a href="https://fullstack.edu.vn/contact-us" target="_blank" rel="noopener">Liên Hệ</a></li>
+        <li><a href="https://fullstack.edu.vn/terms" target="_blank" rel="noopener">Điều Khoản</a></li>
+        <li><a href="https://fullstack.edu.vn/privacy?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Bảo mật</a></li>
+        <li><a href="https://fullstack.edu.vn/careers">Cơ hội việc làm</a></li>
+      </ul>
+      <ul class="AboutSanPham">
+        <span>SẢN PHẨM</span>
+        <li><a href="https://fullstack.edu.vn/about-us?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Game Nester</a></li>
+        <li><a href="https://fullstack.edu.vn/contact-us" target="_blank" rel="noopener">Game Froggy</a></li>
+        <li><a href="https://fullstack.edu.vn/terms" target="_blank" rel="noopener">Game Froggy Pro</a></li>
+        <li><a href="https://fullstack.edu.vn/privacy?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Game CSS Diner</a></li>
+        <li><a href="https://fullstack.edu.vn/careers">Game Scoops</a></li>
+      </ul>
+      <ul class="AboutCongCu">
+        <span>CÔNG CỤ</span>
+        <li><a href="https://fullstack.edu.vn/about-us?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Tạo CV Xin Việc</a></li>
+        <li><a href="https://fullstack.edu.vn/contact-us" target="_blank" rel="noopener">Rút gọn liên kết</a></li>
+        <li><a href="https://fullstack.edu.vn/terms" target="_blank" rel="noopener">Clip-path-marker</a></li>
+        <li><a href="https://fullstack.edu.vn/privacy?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Snippet generator</a></li>
+        <li><a href="https://fullstack.edu.vn/careers">Cảnh báo sờ tay lên mặt</a></li>
+      </ul>
+      <ul class="AboutCongTy">
+        <span>CÔNG TY CỔ PHẦN CÔNG NGHỆ F8</span>
+        <li>Mã số thuế: 0109922901</li>
+        <li>Ngày thành lập: 04/03/2022</li>
+        <li>Lĩnh vực: Công nghệ, giáo dục, lập trình. F8<br>xây dựng và phát triển những sản phẩm<br> mang lại giá trị cho cộng đồng.</li>  
+      </ul>
+      </div>
     </div>
 </body>
 </html>
