@@ -48,44 +48,44 @@
             }
         }
         //khai báo mảng có 5 phần từ
-        var listStudents = new Array(5);
-        for(let i=0;i<listStudents.length;i++)
-        {
-            alert(`nhap vao thong tin cua hoc sinh thu ${i+1} : `);
-            let id = prompt("Enter id: ");
-            let first_name = prompt("Enter first name: ");
-            let last_name = prompt("Enter last name: ");
-            let class_id = prompt("Enter class_id: ");
-            let email = prompt("Enter email: ");
-            let phone_number = prompt("Enter phone number: ");
-            //ngày tháng năm do người dùng nhập vào dd-mm-yy
-            let dobUser = prompt("Enter date of birth: ");
-            //tách chuỗi ngày tháng người dùng nhập để chỉnh lại định dạng phù hợp với Lớp Date của Js
-            const result = dobUser.split(/[\/-]/);
-            //dob có dạng yy--mm-dd
-            let dob = result[2]+"/"+result[1]+"/"+result[0];
-            //tạo mới đối tượng sinh viên với các tham số đối vào phù hợp với constructor
-            listStudents[i] = new SinhVien(id,first_name,last_name,class_id,email,phone_number,dob);
-        }
-        //sap xep sinh vien theo so tuoi tang dan
-        for(let i=0;i<listStudents.length-1;i++)
-        {
-            let minPos = i;
-            for(let j=i+1;j<listStudents.length;j++)
-            {
-                if(listStudents[j].getAgeDay()<listStudents[minPos].getAgeDay())
-                {
-                    minPos = j;
-                }
-            }
-            var temp = listStudents[i];
-            listStudents[i] = listStudents[minPos];
-            listStudents[minPos] = temp;
-        }
-        //duyệt các phần tử trong mảng và xuất thông tin sinh viên theo độ tuổi tăng dần
-        listStudents.forEach(student => {
-        console.log(`${student.getFullName()},(${student.getAgeDay()} ngày), (${student.getAgeYear()} tuổi) ` );
-        });
+        // var listStudents = new Array(5);
+        // for(let i=0;i<listStudents.length;i++)
+        // {
+        //     alert(`nhap vao thong tin cua hoc sinh thu ${i+1} : `);
+        //     let id = prompt("Enter id: ");
+        //     let first_name = prompt("Enter first name: ");
+        //     let last_name = prompt("Enter last name: ");
+        //     let class_id = prompt("Enter class_id: ");
+        //     let email = prompt("Enter email: ");
+        //     let phone_number = prompt("Enter phone number: ");
+        //     //ngày tháng năm do người dùng nhập vào dd-mm-yy
+        //     let dobUser = prompt("Enter date of birth: ");
+        //     //tách chuỗi ngày tháng người dùng nhập để chỉnh lại định dạng phù hợp với Lớp Date của Js
+        //     const result = dobUser.split(/[\/-]/);
+        //     //dob có dạng yy--mm-dd
+        //     let dob = result[2]+"/"+result[1]+"/"+result[0];
+        //     //tạo mới đối tượng sinh viên với các tham số đối vào phù hợp với constructor
+        //     listStudents[i] = new SinhVien(id,first_name,last_name,class_id,email,phone_number,dob);
+        // }
+        // //sap xep sinh vien theo so tuoi tang dan
+        // for(let i=0;i<listStudents.length-1;i++)
+        // {
+        //     let minPos = i;
+        //     for(let j=i+1;j<listStudents.length;j++)
+        //     {
+        //         if(listStudents[j].getAgeDay()<listStudents[minPos].getAgeDay())
+        //         {
+        //             minPos = j;
+        //         }
+        //     }
+        //     var temp = listStudents[i];
+        //     listStudents[i] = listStudents[minPos];
+        //     listStudents[minPos] = temp;
+        // }
+        // //duyệt các phần tử trong mảng và xuất thông tin sinh viên theo độ tuổi tăng dần
+        // listStudents.forEach(student => {
+        // console.log(`${student.getFullName()},(${student.getAgeDay()} ngày), (${student.getAgeYear()} tuổi) ` );
+        // });
         //hiển thị chiểu cao và chiều rộng của màn hình sử dụng
         console.log("Chiều rộng màn hình là: " + window.screen.width);
         console.log("Chiều cao màn hình là: " + window.screen.height);

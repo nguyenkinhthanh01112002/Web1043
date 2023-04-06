@@ -10,6 +10,9 @@
         function checkDiem(diem)
         {
             let check = true;
+            if (!isNaN(diem) && typeof parseFloat(diem) === "number") {
+            console.log("Chuỗi là số thực");
+            }
             if(diem<0||diem>10)
             {
                 check = false;
@@ -74,6 +77,7 @@
             do{
                 check = true;
                 let a = prompt("nhap vao diem cua mon toan: ");
+
                 a1 = parseFloat(a);
                 //kiem tra du lieu dau vao neu rong hoac null hoac diem khong hop le
                 if(checkDiem(a1)==false||a===null||a==="")

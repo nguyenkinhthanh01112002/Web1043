@@ -75,7 +75,7 @@ nav .menu{
   font-family: Jost;
   font-size: 30px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.01em;
   text-align: center;
   margin-top: 15px;
@@ -137,7 +137,7 @@ font-weight: 400;
  .content-heading-2 p{
   font-family: DM Serif Display;
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.5;
   font-weight: 600;
   color:  #0E4E74;
@@ -184,7 +184,7 @@ font-weight: 400;
 .content-Khoa-Hoc-heading p{
   font-family: DM Serif Display;
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.5;
   font-weight: 600;
   color:  #0E4E74;
@@ -211,7 +211,7 @@ font-weight: 400;
  .container-Khoa-Hoc>p{
   font-family: DM Serif Display;
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.5;
   font-weight: 600;
   color:  #0E4E74;
@@ -242,7 +242,7 @@ font-weight: 400;
 .container-text-NoiDungKhoaHoc p{
   font-family: DM Serif Display;
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.5;
   font-weight: 600;
   color:  #0E4E74;
@@ -307,7 +307,7 @@ font-weight: 400;
 .wrap-content-DiemKhacBiet p{
   font-family: DM Serif Display;
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.5;
   font-weight: 600;
   color:  #0E4E74;
@@ -344,7 +344,7 @@ font-weight: 400;
 .wrap-heading-review>p{
   font-family: DM Serif Display;
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.5;
   font-weight: 600;
   color:  #0E4E74;
@@ -356,6 +356,8 @@ font-weight: 400;
 }
 /* CSS CONTENT REVIEW */
 .container-content-review img{
+  width: 52px;
+  height: 52px;
   background-color: #DD9AB7;
   background-clip: content-box;
 }
@@ -374,7 +376,7 @@ font-weight: 400;
 .container-content-review p{
   font-family: DM Serif Display;
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.5;
   font-weight: 600;
   color:  #0E4E74;
@@ -391,7 +393,7 @@ font-weight: 400;
 .container-experienced-users p{
   font-family: DM Serif Display;
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.5;
   font-weight: 600;
   color:  #0E4E74;
@@ -439,7 +441,7 @@ font-weight: 400;
  .wrap-ThongSoKiThuat-Heading>p{
   font-family: DM Serif Display;
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.5;
   font-weight: 600;
   color:  #0E4E74;
@@ -474,7 +476,7 @@ font-weight: 400;
  .container-start-button p{
   font-family: DM Serif Display;
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: 0.5;
   font-weight: 600;
   color:  #0E4E74;
@@ -514,8 +516,8 @@ font-weight: 400;
   line-height: 1.4;
  }
  .container-LienHe li{
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-family: DM Serif Display;
   font-size: 1.2rem;
   line-height: 1.2;
@@ -537,13 +539,45 @@ font-weight: 400;
   font-weight: 600;
   margin-top: 20px;
  }
- .container-LienHe ul>li:first-of-type{
-  margin-top: 30px;
+ .container-LienHe>ul>li:first-of-type{
+  margin-top: 40px;
  }
  .container-LienHe{
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
+ }
+ .container-footer{
+  padding:0 5%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ .container-footer>p{
+  font-family: Jost;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0.01em;
+  color:#4D5053;
+ }
+ .wrap-icons a img{
+  display:inline-block;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin-left:20px;
+ }
+ .wrap-icons .icon_facebook{
+  background-color: #097EEB;
+ }
+ .wrap-icons .icon_youtube
+ {
+  background-color: #FF0000;
+ }
+ .wrap-icons .icon_tiktok{
+  background-color: #000000;
  }
 /* Slideshow container */
 .slideshow-container {
@@ -599,3 +633,8 @@ to {opacity: 1}
 @media only screen and (max-width: 300px) {
 .text {font-size: 11px}
 }       
+.onmousemoveLogo:hover {
+  padding: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}

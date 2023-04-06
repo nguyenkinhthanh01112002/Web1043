@@ -10,18 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="homepage.css">
-    <style>
-      .fade>img{
-        border-radius: 50px;
-      }
-    </style>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="homepage.js" defer></script>
 </head>
 <body>
     <nav>
         <div class="menu">
           <div class="logo">
-            <a href="#"><img src="/AssignmentWeb/Assets/Icons/Logo.png"></a>
+            <a href="#"><img src="/AssignmentWeb/Assets/Icons/Logo.png" class="onmousemoveLogo" onmouseover="addOnmousemove(this)" onmouseout="removeOnmousemove(this)"></a>
           </div>
           <ul>
             <li><a href="#">Tổng Quan</a></li>
@@ -245,8 +242,7 @@
         <p>Bắt tay vào làm không khó, khó ở chỗ bao giờ thì chúng ta bắt đầu?</p>
         <a href="https://htmlcss.fullstack.edu.vn/?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w">Bắt đầu ngay</a>
       </div>
-      <!-- Liên Hệ -->
-      <div class="container-LienHe">
+      <div class="container-LienHe" id="lien_he">
         <div class="container-content-lienhe">
           <div class="wrap-logo-lienhe">
             <img src="/AssignmentWeb/Assets/Icons/Logo.png" alt="logo"/>
@@ -259,37 +255,45 @@
             <li>Hòa, Quận Cầu Giấy, TP. Hà Nội
             </li>
           </ul>
-      </div>
-      <ul class="AboutF8">
-        <span>Về F8</span>
-        <li><a href="https://fullstack.edu.vn/about-us?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Giới Thiệu</a></li>
-        <li><a href="https://fullstack.edu.vn/contact-us" target="_blank" rel="noopener">Liên Hệ</a></li>
-        <li><a href="https://fullstack.edu.vn/terms" target="_blank" rel="noopener">Điều Khoản</a></li>
-        <li><a href="https://fullstack.edu.vn/privacy?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Bảo mật</a></li>
-        <li><a href="https://fullstack.edu.vn/careers">Cơ hội việc làm</a></li>
-      </ul>
-      <ul class="AboutSanPham">
-        <span>SẢN PHẨM</span>
-        <li><a href="https://fullstack.edu.vn/about-us?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Game Nester</a></li>
-        <li><a href="https://fullstack.edu.vn/contact-us" target="_blank" rel="noopener">Game Froggy</a></li>
-        <li><a href="https://fullstack.edu.vn/terms" target="_blank" rel="noopener">Game Froggy Pro</a></li>
-        <li><a href="https://fullstack.edu.vn/privacy?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Game CSS Diner</a></li>
-        <li><a href="https://fullstack.edu.vn/careers">Game Scoops</a></li>
-      </ul>
-      <ul class="AboutCongCu">
+        </div>
+        <ul class="AboutF8">
+          <span>Về F8</span>
+          <li><a href="https://fullstack.edu.vn/about-us?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Giới Thiệu</a></li>
+          <li><a href="https://fullstack.edu.vn/contact-us" target="_blank" rel="noopener">Liên Hệ</a></li>
+          <li><a href="https://fullstack.edu.vn/terms" target="_blank" rel="noopener">Điều Khoản</a></li>
+          <li><a href="https://fullstack.edu.vn/privacy?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Bảo mật</a></li>
+          <li><a href="https://fullstack.edu.vn/careers">Cơ hội việc làm</a></li>
+        </ul>
+        <ul class="AboutSanPham">
+          <span>SẢN PHẨM</span>
+          <li><a href="https://fullstack.edu.vn/about-us?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Game Nester</a></li>
+          <li><a href="https://fullstack.edu.vn/contact-us" target="_blank" rel="noopener">Game Froggy</a></li>
+          <li><a href="https://fullstack.edu.vn/terms" target="_blank" rel="noopener">Game Froggy Pro</a></li>
+          <li><a href="https://fullstack.edu.vn/privacy?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Game CSS Diner</a></li>
+          <li><a href="https://fullstack.edu.vn/careers">Game Scoops</a></li>
+        </ul>
+        <ul class="AboutCongCu">
         <span>CÔNG CỤ</span>
-        <li><a href="https://fullstack.edu.vn/about-us?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Tạo CV Xin Việc</a></li>
-        <li><a href="https://fullstack.edu.vn/contact-us" target="_blank" rel="noopener">Rút gọn liên kết</a></li>
-        <li><a href="https://fullstack.edu.vn/terms" target="_blank" rel="noopener">Clip-path-marker</a></li>
-        <li><a href="https://fullstack.edu.vn/privacy?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Snippet generator</a></li>
-        <li><a href="https://fullstack.edu.vn/careers">Cảnh báo sờ tay lên mặt</a></li>
-      </ul>
-      <ul class="AboutCongTy">
-        <span>CÔNG TY CỔ PHẦN CÔNG NGHỆ F8</span>
-        <li>Mã số thuế: 0109922901</li>
-        <li>Ngày thành lập: 04/03/2022</li>
-        <li>Lĩnh vực: Công nghệ, giáo dục, lập trình. F8<br>xây dựng và phát triển những sản phẩm<br> mang lại giá trị cho cộng đồng.</li>  
-      </ul>
+          <li><a href="https://fullstack.edu.vn/about-us?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Tạo CV Xin Việc</a></li>
+          <li><a href="https://fullstack.edu.vn/contact-us" target="_blank" rel="noopener">Rút gọn liên kết</a></li>
+          <li><a href="https://fullstack.edu.vn/terms" target="_blank" rel="noopener">Clip-path-marker</a></li>
+          <li><a href="https://fullstack.edu.vn/privacy?fbclid=IwAR1pWQQ-PRQNXbMp0-mL9mXkXxiszNewyYItfJneXe-FOS9I2gxqhKg660w" target="_blank" rel="noopener">Snippet generator</a></li>
+          <li><a href="https://fullstack.edu.vn/careers">Cảnh báo sờ tay lên mặt</a></li>
+        </ul>
+        <ul class="AboutCongTy">
+          <span>CÔNG TY CỔ PHẦN CÔNG NGHỆ F8</span>
+          <li>Mã số thuế: 0109922901</li>
+          <li>Ngày thành lập: 04/03/2022</li>
+          <li>Lĩnh vực: Công nghệ, giáo dục, lập trình. F8<br>xây dựng và phát triển những sản phẩm<br> mang lại giá trị cho cộng đồng.</li>  
+        </ul>
+      </div>
+    </div>
+    <div class="container-footer">
+      <p>&copy; 2018-2023 F8. Nền tảng học lập trình hàng đầu Việt Nam</p>
+      <div class="wrap-icons">
+          <a href="https://www.youtube.com/c/F8VNOfficial" target="_blank" rel="noopener"><img class="icon_facebook" src="/AssignmentWeb/Assets/Icons/icon_facebook.png"></a>
+          <a href="https://www.facebook.com/groups/f8official" target="_blank" rel="noopener"><img class="icon_youtube" src="/AssignmentWeb/Assets/Icons/icon_youtube.png"></a>
+          <a href="https://www.tiktok.com/@f8official" target="_blank" rel="noopener"><img class="icon_tiktok" src="/AssignmentWeb/Assets/Icons/icon_tiktok.png"></a>
       </div>
     </div>
 </body>

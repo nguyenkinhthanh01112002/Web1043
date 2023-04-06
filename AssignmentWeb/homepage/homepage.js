@@ -16,3 +16,11 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds 
 }
+// onmouse logo
+//onmouseMove,onmouseOut
+function addOnmousemove(elem) {
+  elem.classList.add("onmousemoveLogo:hover");
+}
+function removeOnmousemove(elem) {
+  elem.classList.remove("onmousemoveLogo:hover");
+}

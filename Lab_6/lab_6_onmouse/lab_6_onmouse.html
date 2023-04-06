@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab6_Onmouse</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="/Lab_6/image/img_mountains_wide.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+    <script>
+        function zoomIn(img) 
+        {
+            img.style.transform = "scale(1.2)"; // phóng to ảnh lên 1.2 lần
+            img.style.transition = "transform 0.3s ease"; // tạo hiệu ứng chuyển động
+            img.style.border = "3px solid red"; // thêm border đỏ vào ảnh
+            img.style.borderRadius = "50px";
+        }
+    function zoomOut(img) 
+    {
+        img.style.transform = "scale(1)"; // trả về kích thước ban đầu
+        img.style.transition = "transform 0.3s ease"; // tạo hiệu ứng chuyển động
+        img.style.border = "none"; // xóa border
+        img.style.borderRadius = "0";
+    }   
+    </script>
+</body>
+</html>
