@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="reset.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+   #seek-bar{
+    width: 640px;
+   }
+   .wrap-video{
+    position: relative;
+   }
+   .wrap-speed-slidebar{
+    position: absolute;
+    bottom:0px;
+    left:-2px;
+   }
+
+   .speed-slidebar span{
+    color: white;
+    padding-left:5px;
+   }
+   .speed-slidebar>.slidebar{
+    opacity: 0.2;
+   }
+   img{
+    width: 52px;
+    height: 52px;
+   }
+   .wrap-button{
+    display: flex;
+    justify-content: space-between;
+   }
+   .container-video{
+    width: 640px;
+   }
+   body{
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+  </style>
+</head>
+<body>
+  <div class="container-video">
+      <div class="wrap-video">
+          <video id="video" width="640" height="360">
+            <source src="/Lab8/y2meta.com-Đã Từng Vô Giá - Mr. Siro (Official Lyrics Video)-(1080p).mp4" type="video/mp4">
+            <source src="video.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+          <div class="wrap-speed-slidebar">
+            <div class="speed-slidebar">
+              <span id="current-time">00:00</span> <span>/</span> <span id="duration">00:00</span>
+              <div class="slidebar">
+                <input type="range" id="seek-bar" value="0" step="0.01">
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="wrap-volumn-slidebar">
+        <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+      </div>
+      <div class="wrap-button">
+          <button id="play"><img src="icon_play.png"></button> 
+          <button id="pause"><img src="icon_pause.png"></button>
+          <button id="stop"><img src="icon_stop.png"></button>
+          <button id="volume-up"><img src="icon_volumn_up.jpg"></button>
+          <button id="volume-down"><img src="icon_volumn_down.png"></button>
+          <button id="toggle-loop"><img src="icon_repeat.jpg"></button> 
+      </div>
+  </div>
+  <script>
+    //truy cập đến các element có các id riêng biệt
+    const video = document.getElementById('video');
+    const playBtn = document.getElementById('play');
+    const pauseBtn = document.getElementById('pause');
+    const stopBtn = document.getElementById('stop');
+    const volumeUpBtn = document.getElementById('volume-up');
+    const volumeDownBtn = document.getElementById('volume-down');
+    const toggleLoopBtn = document.getElementById('toggle-loop');
+    const currentTimeSpan = document.getElementById('current-time');
+    const durationSpan = document.getElementById('duration');
+    const seekBar = document.getElementById('seek-bar');
+    const volumeBar = document.getElementById('volume-bar');
+    //hàm xử lí sự kiện khi người dùng nhấn nút play
+    playBtn.addEventListener('click', function() {
+      video.play();
+    });
+    //hàm xử lí sự kiện khi người dùng nhất nút pause
+    pauseBtn.addEventListener('click', function() {
+      video.pause();
+    });
+    //hàm xử lí sự kiện khi người dùng nhấn nút stop
+    stopBtn.addEventListener('click', function() {
+      video.pause();
+      video.currentTime = 0;
+    });
+    //hàm xử lí sự kiện khi người dùng nhất nút volumn-up
+    volumeUpBtn.addEventListener('click', function() {
+      if (video.volume < 1) {
+        video.volume += 0.1;
+        volumeBar.value = video.volume;
+      }
+    });
+    //hàm xử lí sự kiện khi người dùng nhấn nút volumn-down
+    volumeDownBtn.addEventListener('click', function() {
+      if (video.volume > 0) {
+        video.volume -= 0.1;
+        volumeBar.value = video.volume;
+      }
+    });
+    //hàm xử lí sự kiện khi người dùng nhấn nút toggleLoopBtn
+    toggleLoopBtn.addEventListener('click', function() {
+      if (video.loop) {
+        video.loop = false;
+      } else {
+        video.loop = true;
+      }
+    });
+    video.addEventListener('loadedmetadata', function() {
+      durationSpan.textContent = formatTime(video.duration);
+      seekBar.max = video.duration;
+    });
+    video.addEventListener('timeupdate', function() {
+      currentTimeSpan.textContent = formatTime(video.currentTime);
+      seekBar.value = video.currentTime;
+    });
+    seekBar.addEventListener('input', function() {
+      video.currentTime = seekBar.value;
+    });
+    volumeBar.addEventListener('input', function() {
+      video.volume = volumeBar.value;
+    });
+    function formatTime(time) {
+      const minutes = Math.floor(time / 60);
+      const seconds = Math.floor(time % 60);
+      const formattedMinutes = String(minutes).padStart(2, '0');
+      const formattedSeconds = String(seconds).padStart(2, '0');
+      return `${formattedMinutes}:${formattedSeconds}`;
+    }
+  </script>
+</body>
+</html>
